@@ -6,7 +6,7 @@
 ### 2.1 Manually define the Region of Interest (ROI)
 At first, we can do the analysis for a certain of ROI by defining this as custom polygon in the EE-map in the Code Editor as shown in Figure 1 or you may simply input from your own shapefile!
 
-[Figure 1: Custom Polygon in EE-map](extract-building-shape_01.png)
+![Figure 1: Custom Polygon in EE-map](extract-building-shape_01.png)
 ### 2.2 Dive into the code
 #### to extract the ROI based on the defined polygon
 ```javascript
