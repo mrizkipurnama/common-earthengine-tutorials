@@ -125,7 +125,7 @@ Export.table.toDrive({
 });
 ```
 ## Final Results
-![Figure 1: Extracted Building Height](extracted-building-height.png)
+![Figure 2: Extracted Building Height](extracted-building-height.png)
 
 ## Reference
 #### [1] W. Sirko, S. Kashubin, M. Ritter, A. Annkah, Y.S.E. Bouchareb, Y. Dauphin, D. Keysers, M. Neumann, M. Cisse, J.A. Quinn. Continental-scale building detection from high resolution satellite imagery. arXiv:2107.12283, 2021.  
