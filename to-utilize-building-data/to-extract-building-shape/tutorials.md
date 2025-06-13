@@ -54,7 +54,7 @@ This optional step allows for exporting the resulting data to GIS software in Ge
 
 // 4. To Exports (OPTIONAL)
 Export.table.toDrive({
-  collection: Buildings_ROI,
+  collection: buildings_ROI,
   description: 'Buildings_ROI',
   folder: 'EarthEngineExports',
   fileFormat: 'GeoJSON'
