@@ -25,10 +25,10 @@ var ROI       = ee.Geometry(geometry.geometries().get(1));
 var pointGeom = ee.Geometry(geometry.geometries().get(0));
 ```
 
-##### Load & Clip the data (ESA WorldCover)
-Load and clip the ESA WorldCover image, making sure to adjust the dataset selection as necessary:
+##### Load & Clip the data (Open Building V3)
+Load and clip the building shape data, making sure to adjust the dataset selection as necessary:
 ```javascript
-// 2. Load & clip the ESA WorldCover image [CHANGE/MODIFY ACCORDING BASED ON SELECTED DATASET]
+// 2. Load & clip the Building Shape Data
 var buildings = ee.FeatureCollection('GOOGLE/Research/open-buildings/v3/polygons');
 var buildings_ROI = buildings.filterBounds(ROI)
                           .filter('confidence >= 0.75'); // Add confidence for further filtering if needed
@@ -39,17 +39,16 @@ The confidence level can be used to filter the detections to achieve a certain p
 (3) confidence >= 0.75  
 Please check the references for more information
 
-```
 #### Visualize the Map
 Use this to center your result every time you try to run for another trial 
 ```javascript
 // 3. Add original buildings_ROI layer and center map 
 Map.centerObject(pointGeom, 15);
-Map.addLayer(buildings_ROI, {}, 'Buildings');```
+Map.addLayer(buildings_ROI, {}, 'Buildings');
 ```
 
 #### Export the data to polygon (optional)
-This optional step allows for exporting the resulting data to GIS software in GEOJSON format. The saved data will appear in your Google Drive under "EarthEngineExports". Ensure to adjust the coordinate system and spatial resolution as necessary.
+This optional step allows for exporting the resulting data to GIS software in GeoJSON format. The saved data will appear in your Google Drive under "EarthEngineExports". Ensure to adjust the coordinate system and spatial resolution as necessary.
 
 ```javascript
 
@@ -59,6 +58,7 @@ Export.table.toDrive({
   description: 'Buildings_ROI',
   folder: 'EarthEngineExports',
   fileFormat: 'GeoJSON'
+})
 ```
 
 ## Reference
